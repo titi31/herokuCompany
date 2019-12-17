@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HerokuApplication implements CommandLineRunner {
 	@Autowired
 	private CompanyRepository companyRepository;
-	@RequestMapping("/")
+	/*@RequestMapping("/")
 	@ResponseBody
 	String home() {
 		return "Bonjour";
-	}
+	}*/
 
 	public static void main(String[] args) {
 		SpringApplication.run(HerokuApplication.class, args);
