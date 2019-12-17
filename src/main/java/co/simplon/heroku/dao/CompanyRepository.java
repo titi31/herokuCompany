@@ -12,5 +12,5 @@ import java.util.List;
 @RepositoryRestResource
 public interface CompanyRepository extends JpaRepository<Company,Long> {
     @RestResource(path="/selectedCompany")
-    public List<Company> findBySelectedisTrue();
+    public List<Company> findBySelectedIsTrue();
 }
