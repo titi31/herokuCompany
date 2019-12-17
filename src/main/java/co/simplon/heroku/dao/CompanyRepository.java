@@ -12,5 +12,4 @@ import java.util.List;
 @RepositoryRestResource
 public interface CompanyRepository extends JpaRepository<Company,Long> {
 
-    public List<Company> findAllOrderByIdAsc();
 }

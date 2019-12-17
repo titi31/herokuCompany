@@ -2,6 +2,7 @@ package co.simplon.heroku;
 
 import co.simplon.heroku.dao.CompanyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +16,7 @@ public class HeroController {
 
     @GetMapping("/")
     String home() {
-        return "Bonjour "+companyRepository.findAllOrderByIdAsc();
+        return "Bonjour "+companyRepository.findAll().toString();
     }
 
 }
