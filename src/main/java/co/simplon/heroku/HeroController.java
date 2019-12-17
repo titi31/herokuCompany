@@ -19,7 +19,7 @@ public class HeroController {
 
     @GetMapping("/")
     String home() {
-        return "Bonjour "+companyRepository.findAll().stream().map(Company::toString).collect(Collectors.joining());
+        return "Bonjour ";
     }
 
 }
