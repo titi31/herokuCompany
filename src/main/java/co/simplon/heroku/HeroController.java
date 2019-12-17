@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.stream.Collectors;
+
 @RestController
 public class HeroController {
     @Autowired
@@ -17,7 +19,7 @@ public class HeroController {
 
     @GetMapping("/")
     String home() {
-        return "Bonjour "+companyRepository.findAll().stream().map(Company::toString);
+        return "Bonjour "+companyRepository.findAll().stream().map(Company::toString).collect(Collectors.joining());
     }
 
 }
