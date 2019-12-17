@@ -11,4 +11,6 @@ import java.util.List;
 @CrossOrigin("*")
 @RepositoryRestResource
 public interface CompanyRepository extends JpaRepository<Company,Long> {
+    @RestResource(path="/selectedCompany")
+    public List<Company> findBySelectedisTrue();
 }
