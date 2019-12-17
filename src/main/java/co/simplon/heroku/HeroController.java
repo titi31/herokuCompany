@@ -15,7 +15,7 @@ public class HeroController {
 
     @GetMapping("/")
     String home() {
-        return "Bonjour";
+        return "Bonjour "+companyRepository.findAll();
     }
 
 }
