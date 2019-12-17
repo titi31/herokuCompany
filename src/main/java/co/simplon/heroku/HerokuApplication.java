@@ -16,11 +16,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HerokuApplication implements CommandLineRunner {
 	@Autowired
 	private CompanyRepository companyRepository;
-	/*@RequestMapping("/")
-	@ResponseBody
-	String home() {
-		return "Bonjour";
-	}*/
 
 	public static void main(String[] args) {
 		SpringApplication.run(HerokuApplication.class, args);
@@ -30,6 +25,7 @@ public class HerokuApplication implements CommandLineRunner {
 		companyRepository.save(new Company(null,"Airbus",true));
 		companyRepository.save(new Company(null,"Facebook",true));
 		companyRepository.save((new Company(null,"Google",true)));
+
 
 	}
 
