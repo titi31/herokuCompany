@@ -1,6 +1,7 @@
 package co.simplon.heroku;
 
 import co.simplon.heroku.dao.CompanyRepository;
+import co.simplon.heroku.entity.Company;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
@@ -16,7 +17,7 @@ public class HeroController {
 
     @GetMapping("/")
     String home() {
-        return "Bonjour "+companyRepository.findAll().toString();
+        return "Bonjour "+companyRepository.findAll().stream().map(Company::toString);
     }
 
 }
