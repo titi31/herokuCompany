@@ -11,14 +11,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
-
+/*
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
+@ToString*/
 public class Company implements Serializable{
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private boolean selected;
