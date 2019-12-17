@@ -25,7 +25,9 @@ public class HerokuApplication implements CommandLineRunner {
 		companyRepository.save(new Company(null,"Airbus",true));
 		companyRepository.save(new Company(null,"Facebook",true));
 		companyRepository.save((new Company(null,"Google",true)));
-
+		companyRepository.findAll().forEach(e->{
+			System.out.println(e);
+		});
 
 	}
 
