@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.List;
 
 @CrossOrigin("*")
-//@RepositoryRestResource
 public interface CompanyRepository extends JpaRepository<Company,Long> {
 
 }
